@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url('./img/bubbles.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ebeee7;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 6rem;
+    font-weight: bold;    
+}
+
+header p {
+    margin-bottom: 15px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;   
+}
+
+article {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.time {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;    
+}
+
+.time h2 {
+    font-size: 3rem; 
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;   
+}
+
+.time small {
+    font-size: 1.5rem;    
+}
+
+.time small , header p{
+    font-family: 'Roboto', sans-serif;    
+}

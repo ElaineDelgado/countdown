@@ -8,6 +8,15 @@ const spinnerLoading = document.querySelector('#loading')
 const countdownContainer = document.querySelector('#countdown')
 const bPartyDay = new Date('July  15 2023 19:00:00')
 
+const  getTimeUnit= (unit) => unit < 10 ? '0' + unit : unit
+
+const insertCountdownValues = ( { days, hours, minutes, seconds }) => {
+    daysContainer.textContent = getTimeUnit(days)
+    hoursContainer.textContent = getTimeUnit(hours)
+    minutesContainer.textContent = getTimeUnit(minutes)
+    secondsContainer.textContent = getTimeUnit(seconds)
+}
+
 
 const updateCountdown = () => {
     const currentTime = new Date()
@@ -17,10 +26,7 @@ const updateCountdown = () => {
     const minutes = Math.floor(difference/1000/60) % 60
     const seconds = Math.floor(difference/1000) % 60
 
-    daysContainer.textContent = days < 10 ? '0' + days : days
-    hoursContainer.textContent = hours < 10 ? '0' + hours : hours
-    minutesContainer.textContent = minutes < 10 ? '0' + minutes : minutes
-    secondsContainer.textContent = seconds < 10 ? '0' + seconds : seconds
+    insertCountdownValues( { days, hours, minutes, seconds })
 }
 
 const handleCountdownDisplay = () => {
@@ -30,4 +36,4 @@ const handleCountdownDisplay = () => {
 
 setTimeout(handleCountdownDisplay, 1000)
 
-    updateCountdown(setInterval, 1000)
+setInterval (updateCountdown, 1000)

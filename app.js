@@ -2,9 +2,12 @@ const daysContainer = document.querySelector('#days')
 const hoursContainer = document.querySelector('#hours')
 const minutesContainer = document.querySelector('#minutes')
 const secondsContainer = document.querySelector('#seconds')
+const spinnerLoading = document.querySelector('#loading')
 
 
+const countdownContainer = document.querySelector('#countdown')
 const bPartyDay = new Date('July  15 2023 19:00:00')
+
 
 const updateCountdown = () => {
     const currentTime = new Date()
@@ -18,10 +21,13 @@ const updateCountdown = () => {
     hoursContainer.textContent = hours < 10 ? '0' + hours : hours
     minutesContainer.textContent = minutes < 10 ? '0' + minutes : minutes
     secondsContainer.textContent = seconds < 10 ? '0' + seconds : seconds
-    
-    // console.log({ days, hours, minutes, seconds })
 }
 
-setInterval(() => {
-    updateCountdown()
-}, 1000 )
+const handleCountdownDisplay = () => {
+    spinnerLoading.remove()
+    countdownContainer.style.display ='flex'
+}
+
+setTimeout(handleCountdownDisplay, 1000)
+
+    updateCountdown(setInterval, 1000)

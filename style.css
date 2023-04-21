@@ -4,10 +4,8 @@
 }
 
 body {
-    position: relative;
-    min-height: 100vh;
+    position: relative;    
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(0, 0, 0);
@@ -16,6 +14,14 @@ body {
     background-repeat: no-repeat;
     color: #ebeee7;
     overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
 }
 
 header {
@@ -51,7 +57,8 @@ article.countdown {
     display: flex;
     flex-direction: column; 
     justify-content: center; 
-    align-items: center;    
+    align-items: center;
+    flex-wrap: wrap;    
 }
 
 .time h2 {
@@ -64,7 +71,7 @@ article.countdown {
     font-size: 1.5rem;    
 }
 
-.time small , header p{
+.time small , header p {
     font-family: 'Roboto', sans-serif;    
 }
 
@@ -80,6 +87,7 @@ article.countdown {
 img.loading {
     max-width: 3rem;
 }
+
 @media (max-width: 400px) {
     header h1 {
         font-size: 4rem;  
@@ -89,12 +97,15 @@ img.loading {
         min-width: 300px;    
     } */
     .time h2 {
-        font-size: 1.4rem;   
+        font-size: 2rem;   
     }
     
     .time small {
         font-size: .8rem;    
-    }    
+    }  
+    .bDay {
+        font-size: 3rem;
+    }  
 }
 
 

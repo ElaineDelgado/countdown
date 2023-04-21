@@ -41,7 +41,7 @@ setInterval (updateCountdown, 1000)
 
 // Bolhas de sabão
 
-const body = document.querySelector('body')
+const bubblesContainer = document.querySelector('[data-js="bubbles-container"]')
 
 const createBubbles = () => {
     const bubble = document.createElement('span')
@@ -52,7 +52,7 @@ const createBubbles = () => {
     bubble.style.height = 35 + size + 'px'
     bubble.style.left = Math.random() * innerWidth + 'px'
 
-    body.appendChild(bubble)
+    bubblesContainer.appendChild(bubble)
 
     setTimeout(() => {
         bubble.remove()

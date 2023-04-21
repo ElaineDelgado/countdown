@@ -37,3 +37,26 @@ const handleCountdownDisplay = () => {
 setTimeout(handleCountdownDisplay, 1000)
 
 setInterval (updateCountdown, 1000)
+
+
+// Bolhas de sabão
+
+const body = document.querySelector('body')
+
+const createBubbles = () => {
+    const bubble = document.createElement('span')
+    bubble.classList.add('bubble')
+    let size = Math.random() * 60
+
+    bubble.style.width = 35 + size + 'px'
+    bubble.style.height = 35 + size + 'px'
+    bubble.style.left = Math.random() * innerWidth + 'px'
+
+    body.appendChild(bubble)
+
+    setTimeout(() => {
+        bubble.remove()
+    }, 4000)
+    
+}
+setInterval(createBubbles, 500)

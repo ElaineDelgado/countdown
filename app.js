@@ -6,7 +6,7 @@ const spinnerLoading = document.querySelector('#loading')
 
 
 const countdownContainer = document.querySelector('#countdown')
-const bPartyDay = new Date('July  15 2023 19:00:00')
+const bPartyDay = new Date('July  10 2024 00:00:01')
 
 const  getTimeUnit= (unit) => unit < 10 ? '0' + unit : unit
 
